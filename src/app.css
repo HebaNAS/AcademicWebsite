@@ -1,0 +1,20 @@
+html {
+	--bg: #F6F0E7;
+	--fg: #A5BBCA;
+	--fg-light: #E7D6CC;
+    --fg-dark: #E5C6B5;
+    --text: #241E2F;
+    --action-light: #314951;
+    --action: #284958;
+    --action-dark: #05263B;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+	transition: background-color 0.6s;
+}
+
+p {
+    color: var(--action);
+}
