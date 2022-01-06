@@ -1,6 +1,10 @@
 {
   "name": "academicwebsite",
   "version": "0.0.1",
+  "description": "Personal Academic Portfolio and Blog Site",
+  "author": "Heba El-Shimy",
+  "license": "GNU GPL v3.0",
+  "snyk": true,
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
