@@ -5,10 +5,10 @@ import { action_destroyer } from "svelte/internal";
 </script>
 
 <section class="w-screen flex items-stretch flex-wrap relative main-section mb-20 lg:mb-0">
-    <div class="lg:inline-flex h-4/5 lg:h-full order-last lg:order-first bg-theme-fg-dark dark:bg-theme-action-dark w-full lg:w-2/5 grad-1"></div>
-    <div class="lg:inline-flex h-1/5 lg:h-full w-full lg:w-3/5"></div>
-    <div class="absolute mt-8 mx-auto xl:max-w-4xl w-10/12 lg:w-6/12 xl:w-1/2 h-max lg:inset-y-0 xl:inset-y-0 xl:my-auto flex flex-wrap lg:flex-nowrap inset-x-0">
-        <div class="flex grow flex-col w-full lg:w-5/6 xl:w-max h-fit xl:h-min xl:max-w-sm xl:h-auto items-stretch lg:self-center bg-theme-fg-light dark:bg-theme-action grad-2 rounded shadow-lg lg:drop-shadow-lg">
+    <div class="xl:inline-flex h-4/5 lg:h-full order-last lg:order-first bg-theme-fg-dark dark:bg-theme-action-dark w-full lg:w-2/5 grad-1"></div>
+    <div class="xl:inline-flex h-1/5 lg:h-full w-full lg:w-3/5"></div>
+    <div class="absolute mt-8 mx-auto xl:max-w-4xl w-10/12 lg:w-6/12 xl:w-1/2 h-max xl:inset-y-0 xl:my-auto flex flex-wrap lg:flex-nowrap inset-x-0">
+        <div class="flex grow flex-col w-full lg:w-5/6 xl:w-max h-fit xl:h-min xl:max-w-sm items-stretch xl:self-center bg-theme-fg-light dark:bg-theme-action grad-2 rounded shadow-lg xl:drop-shadow-lg">
             <div class="h-fit">
                 <div class="flex h-fit justify-between mt-10 lg:mt-4 xl:mt-10">
                     <img class="w-7/12 xl:w-7/12 aspect-square mx-auto drop-shadow-2xl" src="heba.webp" alt="Heba El-Shimy" />
@@ -80,6 +80,12 @@ import { action_destroyer } from "svelte/internal";
 @media (min-width: 1024px) and (max-width:1279px) {
     .main-section {
         height: calc(800px - 14rem);
+    }
+}
+
+@media (max-width:1023px) {
+    .main-section {
+        height: calc(1500px - 7rem);
     }
 }
 
