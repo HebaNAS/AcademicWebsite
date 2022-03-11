@@ -41,9 +41,9 @@
 
 
 <!-- This example requires Tailwind CSS v2.0+ -->
-<nav class="bg-transparent">
-    <div class="mx-auto px-2 sm:px-6 lg:px-8 md:px-6">
-      <div class="relative flex items-center justify-between h-20 lg:h-40 md:h-28">
+<nav class="bg-white dark:bg-theme-action-dark">
+    <div class="mx-auto px-2 sm:px-6 xl:px-8 md:px-6">
+      <div class="relative flex items-center justify-between h-20 xl:h-36 md:h-28">
         <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
           <div class="inline-block items-center justify-center p-2">
             <label for="toggleB" class="flex items-center cursor-pointer px-3 py-2">
@@ -72,22 +72,20 @@
               <AnimatedLogo/>
             </div>
             <div class="items-center">
-              <span class="inline-block my-name text-theme-action dark:text-theme-fg-light text-2xl mt-3 lg:text-4xl pl-3 font-semibold">Heba El-Shimy</span>
+              <span class="inline-block my-name text-theme-action dark:text-theme-fg-light text-2xl mt-3 xl:text-4xl pl-3 font-semibold">Heba El-Shimy</span>
             </div>
           </a>
         </div>
-        <div class="flex-1 flex items-center justify-end md:items-stretch md:justify-end">
+        <div class="flex-1 flex items-center justify-end md:items-stretch md:justify-end main-menu">
           <div class="hidden md:block md:ml-6 md:mt-12">
             <div class="flex space-x-4">
-              <a href="/" class="text-theme-action px-3 py-2 text-xl font-normal" aria-current="page">Home</a>
-
-              <a href="/#about" class="text-theme-text hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal">About</a>
+              <a href="/" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" aria-current="page" class:active="{$page.url.pathname === "/"}">Home</a>
   
-              <a href="/#research" class="text-theme-text hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal">Research</a>
+              <a href="/research" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/research"}">Research</a>
   
-              <a href="/blog" class="text-theme-text hover:text-theme-fg px-3 py-2 text-xl font-normal">Blog</a>
+              <a href="/blog" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/blog"}">Blog</a>
   
-              <a href="/#contact" class="text-theme-text hover:text-theme-fg px-3 py-2 text-xl font-normal">Contact</a>
+              <a href="/contact" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/contact"}">Contact</a>
 
               <div class="flex items-center justify-center w-full mb-12">
                 <label for="toggleA" class="flex items-center cursor-pointer px-3 py-2">
@@ -113,11 +111,11 @@
       <div class="px-2 pt-2 pb-3 space-y-1">
         <a href="/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/"}">Home</a>
   
-        <a href="/#research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/#research"}">Research</a>
+        <a href="/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/research"}">Research</a>
   
         <a href="/blog" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/blog"}">Blog</a>
   
-        <a href="/#contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/#contact"}">Contact</a>
+        <a href="/contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/contact"}">Contact</a>
       </div>
     </div>
   </nav>
@@ -171,9 +169,19 @@
       transition: max-height 1s ease-out;
     }
 
+    .main-menu a.active {
+      color: var(--action) !important;
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+    }
+
     #mobile-menu a.active {
       background-color: var(--action-light) !important;
       color: var(--bg) !important;
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+    }
+
+    .dark .main-menu a.active {
+      color: var(--fg) !important;
       transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
     }
 

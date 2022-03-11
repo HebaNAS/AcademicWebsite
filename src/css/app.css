@@ -1,18 +1,37 @@
 html {
 	--bg: #F6F0E7;
 	--fg: #A5BBCA;
-	--fg-light: #E7D6CC;
-    --fg-dark: #E5C6B5;
+	--fg-light: #f4ece6;
+    --fg-dark: #e6dace;
     --text: #241E2F;
+	--text-dark: #303638;
     --action-light: #314951;
     --action: #284958;
     --action-dark: #05263B;
 }
 
 body {
-	background-color: var(--bg);
+	background-color: var(--bg)/25;
 	color: var(--text);
 	transition: background-color 0.6s;
+	position: relative;
+    min-height: 1300px;
+	height: max-content;
+	overflow-y: scroll;
+}
+
+@media (min-width: 1280px) {
+	body {
+		min-height: 800px;
+		height: 100vh;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+	body {
+		min-height: 800px;
+		height: 800px;
+	}
 }
 
 html.dark body {

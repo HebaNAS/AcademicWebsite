@@ -1,6 +1,7 @@
 
 <script type="ts">
   import Meta from '$lib/Meta.svelte';
+  import Footer from '$lib/Footer.svelte';
   import PreloadingIndicator from '$lib/PreloadingIndicator.svelte';
   import Header from '$lib/Header.svelte';
   import { navigating } from '$app/stores';
@@ -16,6 +17,8 @@
 <Header />
 
 <slot></slot>
+
+<Footer />
 
 <style global lang="postcss">
     @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');

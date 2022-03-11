@@ -1,5 +1,7 @@
 
 <script type="ts">
+	import Main from '$lib/Main.svelte';
+
     /** @type {import('@sveltejs/kit').Load} */
 	export function load({ url }) {
 		return {
@@ -8,7 +10,5 @@
 		};
 	}
 </script>
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
-<p>Testing...</p>
+
+<Main/>
