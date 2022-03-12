@@ -16,7 +16,9 @@
 
 <Header />
 
-<slot></slot>
+<div class="custom-container">
+  <slot></slot>
+</div>
 
 <Footer />
 
