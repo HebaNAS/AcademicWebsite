@@ -2,15 +2,15 @@
 
 </script>
 
-<section class="w-screen h-max bg-theme-fg-dark dark:bg-theme-action-dark grad-1 flex flex-col items-stretch pt-10 pb-20">
+<section class="w-screen md:w-full lg:w-screen width-adjust h-max bg-theme-fg-dark dark:bg-theme-action-dark grad-1 flex flex-col items-stretch pt-10 pb-20">
     <form
         action="https://formspree.io/f/xayvjrek"
         method="POST"
         name="simple-contact-form"
         accept-charset="utf-8"
-        class="flex flex-col h-max items-center justify-center mb-10"
+        class="flex flex-col h-max items-center mb-10"
         >
-        <div class="w-10/12 h-max">
+        <div class="w-10/12 h-max lg:w-7/12 ml-auto mr-auto pb-20">
             <h2 class="text-3xl font-bold text-theme-text-dark dark:text-theme-bg text-left my-6 self-start">Get in touch.</h2>
             <div class="py-5 sm:p-6">
               <div class="grid grid-cols-3 gap-6">
@@ -35,6 +35,12 @@
 </section>
 
 <style lang="postcss">
+@media (min-width: 876px) and (max-width: 1023px) {
+    .width-adjust {
+        width: 100vw;
+    }
+}
+
 .grad-1 {
     background: var(--fg-dark)
     linear-gradient(146deg, rgba(255,255,255,0.2) 0%, rgba(2,0,36,0.1) 100%);
