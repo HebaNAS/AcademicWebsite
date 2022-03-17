@@ -11,7 +11,7 @@
         class="flex flex-col h-max items-center mb-10"
         >
         <div class="w-10/12 h-max lg:w-7/12 ml-auto mr-auto pb-20">
-            <h2 class="text-3xl font-bold text-theme-text-dark dark:text-theme-bg text-left my-6 self-start">Get in touch.</h2>
+            <h2 class="text-3xl font-bold font-display text-theme-text-dark dark:text-theme-bg text-left my-6 self-start">Get in touch.</h2>
             <div class="py-5 sm:p-6">
               <div class="grid grid-cols-3 gap-6">
                 <div class="col-span-3 sm:col-span-2">
