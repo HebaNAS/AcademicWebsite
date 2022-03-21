@@ -37,8 +37,11 @@
 		left: 0;
 		top: 0;
 		height: 100%;
-		background-color: #ff6600;
+		background-color: var(--action-dark);
 		transition: width 0.4s;
+	}
+	.dark .progress {
+		background-color: var(--fg-dark);
 	}
 	.fade {
 		position: fixed;

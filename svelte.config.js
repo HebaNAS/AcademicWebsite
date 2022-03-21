@@ -16,6 +16,9 @@ const config = {
 	}),
 	kit: {
 		adapter: adapter(),
+		// paths: {
+		// 	base: '/'
+		// },
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		vite: {
