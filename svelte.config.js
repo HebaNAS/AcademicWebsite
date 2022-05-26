@@ -10,10 +10,13 @@ const production = process.env.NODE_ENV == 'production'
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess({
-		sourceMap: !production,
-		plugins: [tailwindcss(), autoprefixer()],
-	}),
+	extensions: ['.svelte', '.md'],
+	preprocess: [
+		preprocess({
+			sourceMap: !production,
+			plugins: [tailwindcss(), autoprefixer()],
+		})
+	],
 	kit: {
 		adapter: adapter(),
 		// paths: {

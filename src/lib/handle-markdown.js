@@ -1,6 +1,7 @@
 import fs from 'fs';
 import glob from 'glob';
 import fm from 'front-matter';
+import { compile } from 'mdsvex';
 import { remark } from 'remark';
 import html from 'remark-html';
 import rehypePrism from '@mapbox/rehype-prism';
@@ -21,15 +22,16 @@ export function importMarkdowns(markdownPath) {
  * @param {string} path path to file
  * @returns 
  */
-export function convertMarkdown(path) {
+export async function convertMarkdown(path) {
     // read file
     let file = fs.readFileSync(path, 'utf8');
     // extract frontmatter and body with the front-matter package
     let { attributes, body } = fm(file);
     
     // parse the body to html with the remark/rehype pipeline
-    let result = remark().use(html).processSync(body) //.contents;
-    result = rehype().use(rehypePrism).processSync(result);
+    let result = await compile(body);
+    // remark().use(html).processSync(body); //.contents;
+    // result = rehype().use(rehypePrism).processSync(result);
 
     return { path, attributes, html: result};
 }

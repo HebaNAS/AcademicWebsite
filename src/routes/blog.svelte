@@ -22,9 +22,9 @@
       <div class="container w-8/12 mx-auto my-10 py-10 mb-40">
           <h2 class="font-display font-bold text-3xl">Blog</h2>
           <p class="my-10 text-lg text-theme-text-dark dark:text-white">Here is where I share what I'm learning and papers I read and found interesting. The contents of this blog are not related to my teaching and Heriot-Watt University is not responsible of the articles posted in this section.</p>
-          <div class="shadow-xl w-full h-68 rounded-md bg-theme-fg-light dark:bg-theme-action p-10 flex flex-row relative items-stretch justify-stretch">
+          <div class="shadow-xl w-full h-68 rounded-md bg-theme-fg-light dark:bg-theme-action p-10 flex lg:flex-row flex-col relative items-stretch justify-stretch">
             <span class="bg-theme-action dark:bg-theme-fg-light drop-shadow-lg text-white dark:text-theme-text-dark py-2 px-4 rounded-full absolute top-4 right-4">New</span>
-            <a href={posts[0].url} class="w-7/12 h-full self-start">
+            <a href={posts[0].url} class="lg:w-7/12 w-full h-full self-start">
                 <img src={posts[0].thumbnail} alt="New blog post" class="border-bg-white border-8 rounded-md shadow-lg" />
             </a>
             <div class="flex flex-col self-start p-8">
@@ -40,11 +40,15 @@
             </div>
           </div>
           <div class="grid grid-cols-3 gap-8 h-max mt-20">
-          {#each posts as post, i}
-            {#if i !== 0}
-                <PostCard {...post} />
+            {#if posts}
+                {#each posts as post, i}
+                    {#if i !== 0}
+                        <PostCard {...post} />
+                    {/if}
+                {/each}
+            {:else}
+                <p>No blog posts at the moment...</p>
             {/if}
-          {/each}
           </div>
       </div>
   </section>
@@ -62,17 +66,17 @@
       background-blend-mode: color-burn;
   }
   
-  .dark .grad-1 {
+  .dark.grad-1 {
       background: var(--action-dark)
       linear-gradient(146deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%);
       background-blend-mode: color-burn;
-  }
+    }
 
   .grad-2 {
     background: linear-gradient(165deg, rgba(253, 252, 251, 0.4) 0%, rgba(226, 209, 195, 0.4) 100%);
-}
+    }
 
-.dark .grad-2 {
-    background: linear-gradient(-165deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%);
-}
+    .dark.grad-2 {
+        background: linear-gradient(-165deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%);
+    }
   </style>

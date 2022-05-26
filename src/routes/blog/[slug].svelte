@@ -21,9 +21,9 @@
   <div class="container w-8/12 mx-auto my-10 py-10 mb-40">
     <h2 class="font-display font-bold text-3xl">{post.attributes.title}</h2>
     <span class="text-md font-normal">{new Date(post.attributes.date).toLocaleDateString()}</span>
-    <img src="../{post.attributes.thumbnail}" alt={post.attributes.title} class="rounded-md shadow-xl my-10 border-bg-white border-8"/>
-    <div class="text-lg">
-      {@html post.html.value}
+    <img src="../{post.attributes.thumbnail}" alt={post.attributes.title} class="rounded-md shadow-xl mx-auto my-10 border-bg-white border-8"/>
+    <div class="text-xl">
+      {@html post.html.code}
     </div>
 </article>
 
@@ -40,7 +40,7 @@
       background-blend-mode: color-burn;
   }
   
-  .dark .grad-1 {
+  .dark.grad-1 {
       background: var(--action-dark)
       linear-gradient(146deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%);
       background-blend-mode: color-burn;
