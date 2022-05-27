@@ -4,7 +4,6 @@ import { importMarkdowns, convertToPostPreview } from '$lib/handle-markdown.js'
 let postFiles = importMarkdowns('src/posts/')
 
 export function get() {
-    // convert the markdown to the required format
     let posts = postFiles.map((file) => {
       return convertToPostPreview(file)
     });

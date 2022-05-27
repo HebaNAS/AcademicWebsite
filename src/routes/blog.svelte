@@ -3,6 +3,7 @@
     export async function load({ fetch }) {
       // request data from endpoint
       const posts = await fetch('./blog.json').then((r) => {
+
         return r.json()
       })
 

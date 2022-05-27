@@ -22,18 +22,22 @@ export function importMarkdowns(markdownPath) {
  * @param {string} path path to file
  * @returns 
  */
-export async function convertMarkdown(path) {
+export function convertMarkdown(path) {
     // read file
     let file = fs.readFileSync(path, 'utf8');
     // extract frontmatter and body with the front-matter package
     let { attributes, body } = fm(file);
     
-    // parse the body to html with the remark/rehype pipeline
-    let result = await compile(body);
-    // remark().use(html).processSync(body); //.contents;
-    // result = rehype().use(rehypePrism).processSync(result);
+    // const res = (async(body) => {
+    //   let r = await compile(body).then((final) => {
+    //     return final
+    //   })
+    // })
 
-    return { path, attributes, html: result};
+    // parse the body to html with the remark/rehype pipeline
+    // let result = remark().use(html).processSync(body); //.contents;
+    // result = rehype().use(rehypePrism).processSync(result);
+    return { path, attributes, html: body};
 }
 
 export function convertToPostPreview(object) {

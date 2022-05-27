@@ -23,7 +23,7 @@
     <span class="text-md font-normal">{new Date(post.attributes.date).toLocaleDateString()}</span>
     <img src="../{post.attributes.thumbnail}" alt={post.attributes.title} class="rounded-md shadow-xl mx-auto my-10 border-bg-white border-8"/>
     <div class="text-xl">
-      {@html post.html.code}
+      {@html post.html}
     </div>
 </article>
 
