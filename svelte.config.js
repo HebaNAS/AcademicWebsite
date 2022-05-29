@@ -1,5 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import { mdsvex } from 'mdsvex';
+import { mdsvex_config } from './mdsvex.config.js';
 import { resolve } from 'path';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
@@ -10,8 +12,9 @@ const production = process.env.NODE_ENV == 'production'
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', '.md', '.svx'],
 	preprocess: [
+		mdsvex(mdsvex_config),
 		preprocess({
 			sourceMap: !production,
 			plugins: [tailwindcss(), autoprefixer()],

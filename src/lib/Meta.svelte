@@ -18,5 +18,6 @@
     <link rel="alternate" hreflang="x-default" href="https://www.macs.hw.ac.uk/~he12">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.0/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
     <title>Heba El-Shimy | Adjunct Lecturer and PhD Researcher</title>
 </svelte:head>
