@@ -92,7 +92,7 @@
 }
 
 .dark .grad-1 {
-    background: linear-gradient(146deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%);
+    background: linear-gradient(146deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%) !important;
 }
 
 .grad-2 {
@@ -100,6 +100,27 @@
 }
 
 .dark .grad-2 {
-    background: linear-gradient(-165deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%);
+    background: linear-gradient(-165deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%) !important;
+}
+
+.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--action-dark);
+    transition: width 0.4s;
+}
+
+.dark .progress {
+    background-color: var(--fg-dark);
+}
+
+::placeholder {
+    color: var(--action-light);
+}
+
+.dark ::placeholder {
+    color: var(--fg-dark) !important;
 }
 </style>

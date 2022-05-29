@@ -13,7 +13,7 @@
     <meta http-equiv="content-language" content="en" />
     <meta http-equiv="twitter-username" content="@heba_el_shimy" />
     <meta http-equiv="title-template" content="%s ∙ Heba El-Shimy" />
-    <link rel="icon" href="logo.svg" />
+    <!-- <link rel="icon" href="logo.svg" /> -->
     <link rel="canonical" href="https://www.macs.hw.ac.uk/~he12" />
     <link rel="alternate" hreflang="x-default" href="https://www.macs.hw.ac.uk/~he12">
     <link rel="preconnect" href="https://fonts.googleapis.com">

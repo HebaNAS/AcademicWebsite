@@ -3,7 +3,6 @@
     export async function load({ fetch }) {
       // request data from endpoint
       const posts = await fetch('./blog.json').then((r) => {
-
         return r.json()
       })
 
@@ -60,24 +59,4 @@
           width: 100vw;
       }
   }
-  
-  .grad-1 {
-      background: var(--fg-dark)
-      linear-gradient(146deg, rgba(255,255,255,0.2) 0%, rgba(2,0,36,0.1) 100%);
-      background-blend-mode: color-burn;
-  }
-  
-  .dark.grad-1 {
-      background: var(--action-dark)
-      linear-gradient(146deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%);
-      background-blend-mode: color-burn;
-    }
-
-  .grad-2 {
-    background: linear-gradient(165deg, rgba(253, 252, 251, 0.4) 0%, rgba(226, 209, 195, 0.4) 100%);
-    }
-
-    .dark.grad-2 {
-        background: linear-gradient(-165deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%);
-    }
   </style>

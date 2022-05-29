@@ -16,12 +16,18 @@ const config = {
 	preprocess: [
 		mdsvex(mdsvex_config),
 		preprocess({
+			//postcss: true,
 			sourceMap: !production,
 			plugins: [tailwindcss(), autoprefixer()],
 		})
 	],
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			// default options are shown
+            // pages: 'build',
+            // assets: 'build',
+            // fallback: null
+		}),
 		// paths: {
 		// 	base: '/'
 		// },
@@ -41,7 +47,7 @@ const config = {
 				$components: resolve('src/components'),
 				$icons: resolve('src/components/icons'),
 			  },
-			},
+			}
 		}
 	}
 };

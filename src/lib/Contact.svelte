@@ -41,26 +41,6 @@
     }
 }
 
-.grad-1 {
-    background: var(--fg-dark)
-    linear-gradient(146deg, rgba(255,255,255,0.2) 0%, rgba(2,0,36,0.1) 100%);
-    background-blend-mode: color-burn;
-}
-
-.dark .grad-1 {
-    background: var(--action-dark)
-    linear-gradient(146deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%);
-    background-blend-mode: color-burn;
-}
-
-::placeholder {
-    color: var(--action-light);
-}
-
-.dark ::placeholder {
-    color: var(--fg-dark) !important;
-}
-
 textarea {
     resize: none;
 }
