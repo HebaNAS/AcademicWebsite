@@ -1,5 +1,10 @@
 import math from 'remark-math';
-import rehype_katex from 'rehype-katex';
+import rehypeKatex from 'rehype-katex';
+import remarkHtml from 'remark-html';
+import remarkParse from 'remark-parse';
+import remarkMath from 'remark-math';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
 import katex from 'katex';
 import visit from 'unist-util-visit';
 
@@ -31,10 +36,9 @@ const katex_blocks = () => (tree) => {
 		}
 	});
 };
+
 export const mdsvex_config = {
-	remarkPlugins: [math, katex_blocks],
-	rehypePlugins: [correct_hast_tree, rehype_katex],
-    highlight: {
-        highlighter: (code, lang) => string
-    }
+	extensions: ['.svelte.md', '.md', '.svx'],
+	remarkPlugins: [katex_blocks, remarkHtml, remarkParse, remarkMath, remarkRehype],
+	rehypePlugins: [correct_hast_tree, rehypeKatex, rehypeStringify]
 };
