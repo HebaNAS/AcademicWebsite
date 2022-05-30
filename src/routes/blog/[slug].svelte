@@ -11,6 +11,7 @@
 <script>
   import Post from '$lib/Post.svelte';
   export let post;
+  // export const prerender = true;
 </script>
 
 <article class="w-screen md:w-full lg:w-screen width-adjust h-max bg-theme-fg-dark dark:bg-theme-action-dark grad-1 flex flex-col items-stretch pt-10 pb-20">

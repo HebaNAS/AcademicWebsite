@@ -2,7 +2,7 @@
 title: CapsNets, a step-up from CNNs?
 date: 2022-05-15
 excerpt: A gentle intro to Capsule Networks, their architecture and potential.
-thumbnail: blog-capsule.jpeg
+thumbnail: blogimages/blog-capsule.jpeg
 ---
 
 <p class="text-theme-text dark:text-theme-fg-light">Convolutional Neural Networks (CNNs) have been the state-of-the-art when it comes to computer vision tasks. They are in constant improvement and novel architectures are always coming up that are more accurate while being more effcient and faster. However, according to Geoffery Hinton, the routing mechanism between convolutional layers in CNNs, the pooling mechanism, is the problem as it causes loss of valuable information by discarding pixels with low activation or averaging the values of pixels within a window of predefined dimensions (Sabour, Frosst, and G. E. Hinton, 2017). Hinton et al. proposed a new architecture and named it “Capsule Network” and a new routing mechanism, Dynamic Routing between Capsules, which will be discussed in this blog post.</p>
@@ -17,7 +17,7 @@ thumbnail: blog-capsule.jpeg
 <p class="text-theme-text dark:text-theme-fg-light">The intuition behind a capsule network is to have a group of neurons that can capture properties of existing entities in an image and performing <em>inverse graphics</em> on them, as shown in Figure 1. In Computer Graphics, a program typically starts with the instantiation parameters of an object (position, size, orientation, deformation, velocity, hue, texture), and uses those to draw the object. Capsule networks (CapsNets) are able to invert this process by learning from objects in input images their instantiation parameters. CapsNets can achieve equivariance, for example, if an entity is present in an image and is rotated by 40 deg, then a capsule network is able to recognise the original entity and that it is rotated. On the other hand, CNNs have a crude approach at equivariance by recognising that the detected entity matches a variant that is transformed (rotated by 40deg). CNNs learn from thousands of original and transformed examples of an entity while on the other hand, CapsNets can learn efficient representations of objects from far fewer examples and simpler networks.</p>
 <br/>
 
-<img class="rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../inverse_graphics.png" alt="Inverse Graphics by Capsule Networks">
+<img class="rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../blogimages/inverse_graphics.png" alt="Inverse Graphics by Capsule Networks">
 <div class="text-base text-center">
     <span>Figure 1. Inverse Graphics</span><br/>
     <span>Image Credits: <a class="underline" href="https://hiepph.github.io/post/2018-03-06-capsules/">https://hiepph.github.io/post/2018-03-06-capsules/</a></span>
@@ -29,11 +29,10 @@ thumbnail: blog-capsule.jpeg
 <p class="text-theme-text dark:text-theme-fg-light">Another strength of CapsNets is the dynamic routing algorithm that acts as a disentanglement technique to ”explain-away” part-whole relationships. Lower-layer capsules route by agreement to higher-layer capsules forming <em>parse-tree structure</em>, i.e., the entity in a lower-layer capsule should be part of bigger picture in the higher-layer capsule and should have a similar orientation. An example of a parse tree structure can be seen in Figure 2.</p>
 <br/>
 
-<img class="w-16 rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../parse_tree.png" alt="Parse Tree Structure by Capsule Networks">
+<img class="w-16 rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../blogimages/parse_tree.png" alt="Parse Tree Structure by Capsule Networks">
 <div class="text-base text-center">
     <span>Figure 2. Example of Parse Tree Structure</span><br/>
-    <span>Image Credits: <a class="underline" href="Image Source: Towards Data Science
-Available at: https://towardsdatascience.com/capsule-neural-networks-part-2-what-is-a-capsule-846d5418929f">Towards Data Science</a></span>
+    <span>Image Credits: <a class="underline" href="https://towardsdatascience.com/capsule-neural-networks-part-2-what-is-a-capsule-846d5418929f">Towards Data Science</a></span>
 </div>
 
 <br/>
@@ -44,11 +43,10 @@ Available at: https://towardsdatascience.com/capsule-neural-networks-part-2-what
 <p class="text-theme-text dark:text-theme-fg-light">Dynamic routing algorithm can also identify when one entity in a lower-layer capsule does not match the orientation of the higher-layer capsule and that it is slightly off, as shown in Figure 3. Here, a CNN will detected all entities in the face although some of them do not match the target orientation of the face, nonetheless, the CNN will predict the presence of a pitbull face with a high confidence. CapsNet on the other hand will recognise that the parts. although detected correctly, do not contribute to a whole in a correct way, thus will output a lower activation for a pitbull face capsule.</p>
 <br/>
 
-<img class="w-16 rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../wrong_face.png" alt="Part-whole relationship by Capsule Networks">
+<img class="w-16 rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../blogimages/wrong_face.png" alt="Part-whole relationship by Capsule Networks">
 <div class="text-base text-center">
     <span>Figure 3. CapsNets can understand part-whole relationships</span><br/>
-    <span>Image Credits: <a class="underline" href="Image Source: Towards Data Science
-Available at: https://towardsdatascience.com/capsule-neural-networks-part-2-what-is-a-capsule-846d5418929f">Towards Data Science</a></span>
+    <span>Image Credits: <a class="underline" href="https://towardsdatascience.com/capsule-neural-networks-part-2-what-is-a-capsule-846d5418929f">Towards Data Science</a></span>
 </div>
 
 <br/>
@@ -94,7 +92,7 @@ $$
 <br/>
 <br/>
 
-<img class="w-16 rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../algorithm.png" alt="Dynamic Routing Algorithm">
+<img class="w-16 rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../blogimages/algorithm.png" alt="Dynamic Routing Algorithm">
 <div class="text-base text-center">
     <span>Algorithm 1. Dynamic Routing</span><br/>
 </div>
@@ -114,7 +112,7 @@ $$
 where \(T_k\) = 1, \(m^+\) = 0.9, \(m^-\) = 0.1, \(\lambda\) = 0.5 is a weighing factor to minimise the effect of loss of absent digits from shrinking the length of other digits’ activity vectors.
 
 <br/>
-<img class="w-16 rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../capsnet.png" alt="CapsNet Architecture">
+<img class="w-16 rounded-md shadow-xl mx-auto mt-10 mb-4 border-bg-fg-dark border-8" src="../blogimages/capsnet.png" alt="CapsNet Architecture">
 <div class="text-base text-center">
     <span>Figure 4. Capsule Network Architecture as in (Sabour, Frosst, and G. E. Hinton, 2017)</span><br/>
 </div>

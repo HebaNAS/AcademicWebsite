@@ -2,6 +2,8 @@
 <script type="ts">
 	import Main from '$lib/Main.svelte';
 
+	// export const prerender = true;
+
     // /** @type {import('@sveltejs/kit').Load} */
 	// export function load({ url }) {
 	// 	return {

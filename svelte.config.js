@@ -21,8 +21,13 @@ const config = {
 		})
 	],
 	kit: {
+		browser: {
+			//hydrate: false,
+			router: false,
+		},
 		prerender: {
-			entries: []
+			crawl: true,
+			default: true,
 		},
 		adapter: adapter({
 			// default options are shown
@@ -36,7 +41,7 @@ const config = {
 		},
 		/*appDir: 'app', */
 		// hydrate the <div id="svelte"> element in src/app.html
-		trailingSlash: 'always',
+		trailingSlash: 'never',
 		vite: {
 			css: {
 			  postcss: {
