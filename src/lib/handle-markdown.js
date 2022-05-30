@@ -1,11 +1,11 @@
 import fs from 'fs';
 import glob from 'glob';
 import fm from 'front-matter';
-import { compile } from 'mdsvex';
-import { remark } from 'remark';
-import html from 'remark-html';
-import rehypePrism from '@mapbox/rehype-prism';
-import { rehype } from 'rehype';
+// import { compile } from 'mdsvex';
+// import { remark } from 'remark';
+// import html from 'remark-html';
+// import rehypePrism from '@mapbox/rehype-prism';
+// import { rehype } from 'rehype';
 
 /**
  * import all markdown files in specified path, extract front matter and convert to html

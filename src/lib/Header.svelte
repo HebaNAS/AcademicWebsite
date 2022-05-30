@@ -83,9 +83,9 @@
   
               <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/research" rel="external" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/research" || $page.url.pathname === "/~he12/research"}">Research</a>
   
-              <a sveltekit:prefetch href="/~he12/blog" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/blog"}">Blog</a>
+              <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/myposts" rel="external" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/myposts" || $page.url.pathname === "/~he12/myposts/"}">Blog</a>
   
-              <a sveltekit:prefetch href="/~he12/contact" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/contact"}">Contact</a>
+              <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/contact" rel="external" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/contact" || $page.url.pathname === "/~he12/contact/"}">Contact</a>
 
               <div class="flex items-center justify-center w-full mb-12">
                 <label for="toggleA" class="flex items-center cursor-pointer px-3 py-2">
@@ -109,13 +109,13 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden slide" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a sveltekit:prefetch href="/~he12/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/"}">Home</a>
+        <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/" rel="external" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/" || $page.url.pathname === "/~he12/"}">Home</a>
   
-        <a sveltekit:prefetch href="/~he12/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/research"}">Research</a>
+        <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/research" rel="external" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/research" || $page.url.pathname === "/~he12/research/"}">Research</a>
   
-        <a sveltekit:prefetch href="/~he12/blog" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/blog"}">Blog</a>
+        <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/myposts" rel="external" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/myposts" || $page.url.pathname === "/~he12/myposts/"}">Blog</a>
   
-        <a sveltekit:prefetch href="/~he12/contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/contact"}">Contact</a>
+        <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/contact" rel="external" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/contact" || $page.url.pathname === "/~he12/contact/"}">Contact</a>
       </div>
     </div>
   </nav>

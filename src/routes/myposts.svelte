@@ -1,8 +1,9 @@
 <script context="module">
+    // export const prerender = false;
     // load data
     export async function load({ fetch }) {
       // request data from endpoint
-      const posts = await fetch('./blog.json').then((r) => {
+      const posts = await fetch('./myposts.json').then((r) => {
         return r.json()
       })
 

@@ -18,8 +18,8 @@
                 </div>
             </div>
             <div class="flex flex-row mt-4 mb-6 lg:mt-2 lg:mb-2 xl:mb-6 xl:mt-4 w-10/12 mx-auto justify-around items-center text-center">
-                <a href="https://www.macs.hw.ac.uk/~he12/research" class="w-28 lg:mr-2 xl:mr-auto border-theme-action dark:border-theme-fg-light border-2 rounded-full py-2 px-4 hover:bg-theme-action dark:hover:bg-theme-fg-dark hover:text-theme-fg-dark dark:hover:text-theme-action-dark transition-colors ease-in-out duration-500">Research</a>
-                <a href="https://www.macs.hw.ac.uk/~he12/blog" class="w-28 lg:ml-2 xl:ml-auto border-theme-action dark:border-theme-fg-light border-2 rounded-full py-2 px-4 hover:bg-theme-action hover:text-theme-fg-dark dark:hover:bg-theme-fg-dark dark:hover:text-theme-action-dark transition-colors ease-in-out duration-500">Blog</a>
+                <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/research" rel="external" class="w-28 lg:mr-2 xl:mr-auto border-theme-action dark:border-theme-fg-light border-2 rounded-full py-2 px-4 hover:bg-theme-action dark:hover:bg-theme-fg-dark hover:text-theme-fg-dark dark:hover:text-theme-action-dark transition-colors ease-in-out duration-500">Research</a>
+                <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/myposts" rel="external" class="w-28 lg:ml-2 xl:ml-auto border-theme-action dark:border-theme-fg-light border-2 rounded-full py-2 px-4 hover:bg-theme-action hover:text-theme-fg-dark dark:hover:bg-theme-fg-dark dark:hover:text-theme-action-dark transition-colors ease-in-out duration-500">Blog</a>
             </div>
             <div class="flex flex-row justify-around w-full mt-10 lg:mt-5 xl:mt-10 bg-white py-6 lg:py-3 xl:py-6">
                 <div>

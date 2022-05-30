@@ -22,8 +22,8 @@ const config = {
 	],
 	kit: {
 		browser: {
-			//hydrate: false,
-			router: false,
+			// hydrate: false,
+			// router: false,
 		},
 		prerender: {
 			crawl: true,
