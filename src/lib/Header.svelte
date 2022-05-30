@@ -67,7 +67,7 @@
           </button>
         </div>
         <div class="flex-1 inline-flex items-center justify-start md:items-stretch md:justify-start">
-          <a href="/" class="inline-flex items-center w-60 md:w-80 mb-4 mt-2">
+          <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/" rel="external" class="inline-flex items-center w-60 md:w-80 mb-4 mt-2">
             <div class="items-center h-10 pb-2 mb-3">
               <AnimatedLogo/>
             </div>
@@ -79,13 +79,13 @@
         <div class="flex-1 flex items-center justify-end md:items-stretch md:justify-end main-menu">
           <div class="hidden md:block md:ml-6 md:mt-12">
             <div class="flex space-x-4">
-              <a sveltekit:prefetch href="/" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" aria-current="page" class:active="{$page.url.pathname === "/"}">Home</a>
+              <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/" rel="external" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" aria-current="page" class:active="{$page.url.pathname === "/" || $page.url.pathname === "/~he12/"}">Home</a>
   
-              <a sveltekit:prefetch href="/research" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/research"}">Research</a>
+              <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/research" rel="external" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/research" || $page.url.pathname === "/~he12/research"}">Research</a>
   
-              <a sveltekit:prefetch href="/blog" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/blog"}">Blog</a>
+              <a sveltekit:prefetch href="/~he12/blog" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/blog"}">Blog</a>
   
-              <a sveltekit:prefetch href="/contact" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/contact"}">Contact</a>
+              <a sveltekit:prefetch href="/~he12/contact" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/contact"}">Contact</a>
 
               <div class="flex items-center justify-center w-full mb-12">
                 <label for="toggleA" class="flex items-center cursor-pointer px-3 py-2">
@@ -109,13 +109,13 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden slide" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a sveltekit:prefetch href="/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/"}">Home</a>
+        <a sveltekit:prefetch href="/~he12/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/"}">Home</a>
   
-        <a sveltekit:prefetch href="/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/research"}">Research</a>
+        <a sveltekit:prefetch href="/~he12/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/research"}">Research</a>
   
-        <a sveltekit:prefetch href="/blog" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/blog"}">Blog</a>
+        <a sveltekit:prefetch href="/~he12/blog" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/blog"}">Blog</a>
   
-        <a sveltekit:prefetch href="/contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/contact"}">Contact</a>
+        <a sveltekit:prefetch href="/~he12/contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/contact"}">Contact</a>
       </div>
     </div>
   </nav>
@@ -126,14 +126,14 @@
     }
 
     input ~ .dot {
-      background-image: url('/light.png');
+      background-image: url('/~he12/light.png');
       background-size: 20px;
       background-repeat:no-repeat;
       background-position: center center;
     }
 
     input:checked ~ .dot {
-      background-image: url('/dark.png');
+      background-image: url('/~he12/dark.png');
       background-size: 20px;
       background-repeat:no-repeat;
       background-position: 3px 1px;

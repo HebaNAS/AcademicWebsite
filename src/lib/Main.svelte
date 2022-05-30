@@ -9,7 +9,7 @@
         <div class="flex grow flex-col w-full lg:w-5/6 xl:w-max h-fit xl:h-min xl:max-w-sm items-stretch xl:self-center bg-theme-fg-light dark:bg-theme-action grad-2 rounded shadow-lg xl:drop-shadow-lg">
             <div class="h-fit">
                 <div class="flex h-fit justify-between mt-10 lg:mt-4 xl:mt-10">
-                    <img class="w-7/12 xl:w-7/12 aspect-square mx-auto drop-shadow-2xl" src="heba.webp" alt="Heba El-Shimy" />
+                    <img class="w-7/12 xl:w-7/12 aspect-square mx-auto drop-shadow-2xl" src="/~he12/heba.webp" alt="Heba El-Shimy" />
                 </div>
                 <div class="text-center my-10 lg:my-4 xl:my-10 w-10/12 lg:w-8/12 xl:w-10/12 mx-auto">
                     <p class="font-bold text-theme-text-dark dark:text-theme-fg-light">Heba El-Shimy, MSc., AFHEA</p>
@@ -18,8 +18,8 @@
                 </div>
             </div>
             <div class="flex flex-row mt-4 mb-6 lg:mt-2 lg:mb-2 xl:mb-6 xl:mt-4 w-10/12 mx-auto justify-around items-center text-center">
-                <a href="/research" class="w-28 lg:mr-2 xl:mr-auto border-theme-action dark:border-theme-fg-light border-2 rounded-full py-2 px-4 hover:bg-theme-action dark:hover:bg-theme-fg-dark hover:text-theme-fg-dark dark:hover:text-theme-action-dark transition-colors ease-in-out duration-500">Research</a>
-                <a href="/blog" class="w-28 lg:ml-2 xl:ml-auto border-theme-action dark:border-theme-fg-light border-2 rounded-full py-2 px-4 hover:bg-theme-action hover:text-theme-fg-dark dark:hover:bg-theme-fg-dark dark:hover:text-theme-action-dark transition-colors ease-in-out duration-500">Blog</a>
+                <a href="https://www.macs.hw.ac.uk/~he12/research" class="w-28 lg:mr-2 xl:mr-auto border-theme-action dark:border-theme-fg-light border-2 rounded-full py-2 px-4 hover:bg-theme-action dark:hover:bg-theme-fg-dark hover:text-theme-fg-dark dark:hover:text-theme-action-dark transition-colors ease-in-out duration-500">Research</a>
+                <a href="https://www.macs.hw.ac.uk/~he12/blog" class="w-28 lg:ml-2 xl:ml-auto border-theme-action dark:border-theme-fg-light border-2 rounded-full py-2 px-4 hover:bg-theme-action hover:text-theme-fg-dark dark:hover:bg-theme-fg-dark dark:hover:text-theme-action-dark transition-colors ease-in-out duration-500">Blog</a>
             </div>
             <div class="flex flex-row justify-around w-full mt-10 lg:mt-5 xl:mt-10 bg-white py-6 lg:py-3 xl:py-6">
                 <div>

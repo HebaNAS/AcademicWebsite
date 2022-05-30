@@ -1,4 +1,4 @@
-import adapter from 'svelte-adapter-github';
+import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 import { mdsvex_config } from './mdsvex.config.js';
@@ -16,26 +16,27 @@ const config = {
 	preprocess: [
 		mdsvex(mdsvex_config),
 		preprocess({
-			//postcss: true,
 			sourceMap: !production,
 			plugins: [tailwindcss(), autoprefixer()],
 		})
 	],
 	kit: {
+		prerender: {
+			entries: []
+		},
 		adapter: adapter({
 			// default options are shown
             pages: 'build',
             assets: 'build',
-            domain: 'https://www.macs.hw.ac.uk',
-			jekyll: false,
-			fallback: 'build/index.html',
-			precompress: false
+            // domain: 'https://www.macs.hw.ac.uk/~he12',
+			fallback: 'index.html',
 		}),
-		// paths: {
-		// 	base: production ? '/~he12' : '/',
-		// },
+ 		paths: {
+			base: '/~he12',
+		},
+		/*appDir: 'app', */
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
+		trailingSlash: 'always',
 		vite: {
 			css: {
 			  postcss: {
