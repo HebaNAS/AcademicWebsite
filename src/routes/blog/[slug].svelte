@@ -1,11 +1,6 @@
 <script context="module">
   export async function load({ params, fetch }) {
-    console.log(params)
-    //if (params.slug !== 'logo.svg') {
     const post = await fetch(`${params.slug}.json`).then((res) => res.json());
-    //}
-
-    console.log('BRRRRRR: ', post)
     
     return {
         props: { post }
@@ -19,6 +14,8 @@
 </script>
 
 <article class="w-screen md:w-full lg:w-screen width-adjust h-max bg-theme-fg-dark dark:bg-theme-action-dark grad-1 flex flex-col items-stretch pt-10 pb-20">
+  <a rel="external" href="/blog" class="ml-20 underline text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal">Back to Blog</a>
+  
   <svelte:component this={Post} {post}/>
 </article>
 

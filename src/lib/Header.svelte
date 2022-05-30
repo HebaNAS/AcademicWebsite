@@ -79,13 +79,13 @@
         <div class="flex-1 flex items-center justify-end md:items-stretch md:justify-end main-menu">
           <div class="hidden md:block md:ml-6 md:mt-12">
             <div class="flex space-x-4">
-              <a href="/" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" aria-current="page" class:active="{$page.url.pathname === "/"}">Home</a>
+              <a sveltekit:prefetch href="/" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" aria-current="page" class:active="{$page.url.pathname === "/"}">Home</a>
   
-              <a href="/research" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/research"}">Research</a>
+              <a sveltekit:prefetch href="/research" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/research"}">Research</a>
   
-              <a href="/blog" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/blog"}">Blog</a>
+              <a sveltekit:prefetch href="/blog" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/blog"}">Blog</a>
   
-              <a href="/contact" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/contact"}">Contact</a>
+              <a sveltekit:prefetch href="/contact" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/contact"}">Contact</a>
 
               <div class="flex items-center justify-center w-full mb-12">
                 <label for="toggleA" class="flex items-center cursor-pointer px-3 py-2">
@@ -109,13 +109,13 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden slide" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/"}">Home</a>
+        <a sveltekit:prefetch href="/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/"}">Home</a>
   
-        <a href="/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/research"}">Research</a>
+        <a sveltekit:prefetch href="/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/research"}">Research</a>
   
-        <a href="/blog" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/blog"}">Blog</a>
+        <a sveltekit:prefetch href="/blog" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/blog"}">Blog</a>
   
-        <a href="/contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/contact"}">Contact</a>
+        <a sveltekit:prefetch href="/contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/contact"}">Contact</a>
       </div>
     </div>
   </nav>

@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from 'svelte-adapter-github';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 import { mdsvex_config } from './mdsvex.config.js';
@@ -24,12 +24,15 @@ const config = {
 	kit: {
 		adapter: adapter({
 			// default options are shown
-            // pages: 'build',
-            // assets: 'build',
-            // fallback: null
+            pages: 'build',
+            assets: 'build',
+            domain: 'https://www.macs.hw.ac.uk',
+			jekyll: false,
+			fallback: 'build/index.html',
+			precompress: false
 		}),
 		// paths: {
-		// 	base: '/'
+		// 	base: production ? '/~he12' : '/',
 		// },
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
