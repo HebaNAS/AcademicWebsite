@@ -25,10 +25,11 @@ const config = {
  		paths: {
 			base: process.env.NODE_ENV === 'development' ? '' : '/~he4002',
 		},
-		// Disable server-side rendering for static site generation
+		// Ensure all pages are prerendered for static site generation
 		prerender: {
 			handleHttpError: 'warn',
-			handleMissingId: 'warn'
+			handleMissingId: 'warn',
+      entries: ['*']  // Prerender all routes including dynamic ones
 		}
 	}
 };

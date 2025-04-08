@@ -27,6 +27,8 @@ export function convertMarkdown(path) {
 }
 
 export function convertToPostPreview(object) {
-  const url = object.path.replace('.md', '').replace('src/', '').replace('posts', 'blog');
-  return {...object.attributes, url};
+  // Extract the slug from the path (filename without .md)
+  const slug = object.path.split('/').pop().replace('.md', '');
+  // Create the URL using the blog route pattern
+  return { ...object.attributes, url: `blog/${slug}` };
 }
