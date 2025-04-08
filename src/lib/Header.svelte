@@ -4,24 +4,6 @@
     import { page } from '$app/stores';
     import { base } from '$app/paths';
 
-    // Helper function to correctly determine if a path is active
-    function isPathActive(pathName) {
-        const currentPath = $page.url.pathname;
-        
-        // For the home page
-        if (pathName === '') {
-            return currentPath === '/' || 
-                  currentPath === base || 
-                  currentPath === `${base}/`;
-        }
-        
-        // For other pages
-        return currentPath === `/${pathName}` || 
-              currentPath === `${base}/${pathName}` ||
-              currentPath === `/${pathName}/` || 
-              currentPath === `${base}/${pathName}/`;
-    }
-
     onMount(() => {
       const btn = document.querySelector('button.mobile-menu-button');
       const menu = document.querySelector('#mobile-menu');
@@ -102,13 +84,13 @@
         <div class="flex-1 flex items-center justify-end md:items-stretch md:justify-end main-menu">
           <div class="hidden md:block md:ml-6 md:mt-12">
             <div class="flex space-x-4">
-              <a href="{base}/" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" aria-current="page" class:active={isPathActive('')}>Home</a>
+              <a href="{base}/" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500 {$page.url.pathname === base || $page.url.pathname === base + '/' ? 'active' : ''}" aria-current="page">Home</a>
   
-              <a href="{base}/research" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active={isPathActive('research')}>Research</a>
+              <a href="{base}/research" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500 {$page.url.pathname === base + '/research' || $page.url.pathname === base + '/research/' ? 'active' : ''}">Research</a>
   
-              <a href="{base}/posts" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active={isPathActive('posts')}>Blog</a>
+              <a href="{base}/posts" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500 {$page.url.pathname === base + '/posts' || $page.url.pathname === base + '/posts/' ? 'active' : ''}">Blog</a>
   
-              <a href="{base}/contact" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active={isPathActive('contact')}>Contact</a>
+              <a href="{base}/contact" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500 {$page.url.pathname === base + '/contact' || $page.url.pathname === base + '/contact/' ? 'active' : ''}">Contact</a>
 
               <div class="flex items-center justify-center w-full mb-12">
                 <label for="toggleA" class="flex items-center cursor-pointer px-3 py-2">
@@ -132,13 +114,13 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden slide" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="{base}/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active={isPathActive('')}>Home</a>
+        <a href="{base}/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal {$page.url.pathname === base || $page.url.pathname === base + '/' ? 'active' : ''}">Home</a>
   
-        <a href="{base}/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active={isPathActive('research')}>Research</a>
+        <a href="{base}/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal {$page.url.pathname === base + '/research' || $page.url.pathname === base + '/research/' ? 'active' : ''}">Research</a>
   
-        <a href="{base}/posts" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active={isPathActive('posts')}>Blog</a>
+        <a href="{base}/posts" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal {$page.url.pathname === base + '/posts' || $page.url.pathname === base + '/posts/' ? 'active' : ''}">Blog</a>
   
-        <a href="{base}/contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active={isPathActive('contact')}>Contact</a>
+        <a href="{base}/contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal {$page.url.pathname === base + '/contact' || $page.url.pathname === base + '/contact/' ? 'active' : ''}">Contact</a>
       </div>
     </div>
   </nav>
@@ -196,7 +178,9 @@
 
     .main-menu a.active {
       color: var(--action) !important;
+      font-weight: 600;
       transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     #mobile-menu a.active {
@@ -208,6 +192,7 @@
     .dark .main-menu a.active {
       color: var(--fg) !important;
       transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     }
 
     .dark #mobile-menu a.active {
