@@ -1,13 +1,36 @@
-<script type="ts">
+<script lang="ts">
     import AnimatedLogo from '$lib/AnimatedLogo.svelte';
     import { onMount } from 'svelte';
     import { page } from '$app/stores';
+    import { base } from '$app/paths';
+
+    // Helper function to correctly determine if a path is active
+    function isPathActive(pathName) {
+        const currentPath = $page.url.pathname;
+        
+        // For the home page
+        if (pathName === '') {
+            return currentPath === '/' || 
+                  currentPath === base || 
+                  currentPath === `${base}/`;
+        }
+        
+        // For other pages
+        return currentPath === `/${pathName}` || 
+              currentPath === `${base}/${pathName}` ||
+              currentPath === `/${pathName}/` || 
+              currentPath === `${base}/${pathName}/`;
+    }
 
     onMount(() => {
       const btn = document.querySelector('button.mobile-menu-button');
       const menu = document.querySelector('#mobile-menu');
       const menuIcon = document.querySelectorAll('.block-line');
       const checkboxes = document.querySelectorAll('input[id*="toggle"]');
+
+      // Update the image paths in the CSS
+      document.documentElement.style.setProperty('--light-icon', `url('${base}/light.png')`);
+      document.documentElement.style.setProperty('--dark-icon', `url('${base}/dark.png')`);
 
       // Toggle mobile menu
       btn.addEventListener('click', () => {
@@ -67,7 +90,7 @@
           </button>
         </div>
         <div class="flex-1 inline-flex items-center justify-start md:items-stretch md:justify-start">
-          <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/" rel="external" class="inline-flex items-center w-60 md:w-80 mb-4 mt-2">
+          <a href="{base}/" class="inline-flex items-center w-60 md:w-80 mb-4 mt-2">
             <div class="items-center h-10 pb-2 mb-3">
               <AnimatedLogo/>
             </div>
@@ -79,13 +102,13 @@
         <div class="flex-1 flex items-center justify-end md:items-stretch md:justify-end main-menu">
           <div class="hidden md:block md:ml-6 md:mt-12">
             <div class="flex space-x-4">
-              <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/" rel="external" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" aria-current="page" class:active="{$page.url.pathname === "/" || $page.url.pathname === "/~he12/"}">Home</a>
+              <a href="{base}/" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" aria-current="page" class:active={isPathActive('')}>Home</a>
   
-              <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/research" rel="external" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/research" || $page.url.pathname === "/~he12/research"}">Research</a>
+              <a href="{base}/research" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active={isPathActive('research')}>Research</a>
   
-              <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/myposts" rel="external" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/myposts" || $page.url.pathname === "/~he12/myposts/"}">Blog</a>
+              <a href="{base}/posts" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active={isPathActive('posts')}>Blog</a>
   
-              <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/contact" rel="external" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active="{$page.url.pathname === "/contact" || $page.url.pathname === "/~he12/contact/"}">Contact</a>
+              <a href="{base}/contact" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500" class:active={isPathActive('contact')}>Contact</a>
 
               <div class="flex items-center justify-center w-full mb-12">
                 <label for="toggleA" class="flex items-center cursor-pointer px-3 py-2">
@@ -109,31 +132,33 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden slide" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/" rel="external" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/" || $page.url.pathname === "/~he12/"}">Home</a>
+        <a href="{base}/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active={isPathActive('')}>Home</a>
   
-        <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/research" rel="external" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/research" || $page.url.pathname === "/~he12/research/"}">Research</a>
+        <a href="{base}/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active={isPathActive('research')}>Research</a>
   
-        <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/myposts" rel="external" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/myposts" || $page.url.pathname === "/~he12/myposts/"}">Blog</a>
+        <a href="{base}/posts" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active={isPathActive('posts')}>Blog</a>
   
-        <a sveltekit:prefetch href="https://www.macs.hw.ac.uk/~he12/contact" rel="external" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active="{$page.url.pathname === "/contact" || $page.url.pathname === "/~he12/contact/"}">Contact</a>
+        <a href="{base}/contact" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal" class:active={isPathActive('contact')}>Contact</a>
       </div>
     </div>
   </nav>
 
 <style global lang="postcss">
+ 
+    
     .my-name {
         font-family: 'Sacramento', sans-serif;
     }
 
     input ~ .dot {
-      background-image: url('/~he12/light.png');
+      background-image: var(--light-icon, url('/light.png'));
       background-size: 20px;
       background-repeat:no-repeat;
       background-position: center center;
     }
 
     input:checked ~ .dot {
-      background-image: url('/~he12/dark.png');
+      background-image: var(--dark-icon, url('/dark.png'));
       background-size: 20px;
       background-repeat:no-repeat;
       background-position: 3px 1px;

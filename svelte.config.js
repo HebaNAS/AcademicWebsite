@@ -1,62 +1,34 @@
 import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import { mdsvex_config } from './mdsvex.config.js';
-import { resolve } from 'path';
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
 
 const production = process.env.NODE_ENV == 'production'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
 	extensions: ['.svelte', '.md', '.svx'],
 	preprocess: [
+    vitePreprocess(),
 		mdsvex(mdsvex_config),
-		preprocess({
-			sourceMap: !production,
-			plugins: [tailwindcss(), autoprefixer()],
-		})
 	],
 	kit: {
-		browser: {
-			// hydrate: false,
-			// router: false,
-		},
-		prerender: {
-			crawl: true,
-			default: true,
-		},
 		adapter: adapter({
 			// default options are shown
-            pages: 'build',
-            assets: 'build',
-            // domain: 'https://www.macs.hw.ac.uk/~he12',
+      pages: 'build',
+      assets: 'build',
+      //domain: process.env.NODE_ENV === 'development' ? 'http://localhost:5173/~he4002' : 'https://www.macs.hw.ac.uk/~he4002',
 			fallback: 'index.html',
+      precompress: false,
+			strict: true
 		}),
  		paths: {
-			base: '/~he12',
+			base: process.env.NODE_ENV === 'development' ? '' : '/~he4002',
 		},
-		/*appDir: 'app', */
-		// hydrate the <div id="svelte"> element in src/app.html
-		trailingSlash: 'never',
-		vite: {
-			css: {
-			  postcss: {
-				plugins: [tailwindcss(), autoprefixer()],
-			  },
-			},
-			ssr: {
-			  noExternal: ['svelte-hero-icons'],
-			},
-			resolve: {
-			  alias: {
-				$components: resolve('src/components'),
-				$icons: resolve('src/components/icons'),
-			  },
-			}
+		// Disable server-side rendering for static site generation
+		prerender: {
+			handleHttpError: 'warn',
+			handleMissingId: 'warn'
 		}
 	}
 };

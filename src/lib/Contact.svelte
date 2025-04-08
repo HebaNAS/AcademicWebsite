@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
 
 </script>
 
@@ -43,5 +43,14 @@
 
 textarea {
     resize: none;
+}
+
+/* Gradient background */
+.grad-1 {
+    background: linear-gradient(146deg, rgba(255,255,255,0.2) 0%, rgba(2,0,36,0.1) 100%);
+}
+
+.dark .grad-1 {
+    background: linear-gradient(146deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%) !important;
 }
 </style>

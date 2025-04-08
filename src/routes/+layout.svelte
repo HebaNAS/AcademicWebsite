@@ -1,5 +1,4 @@
-
-<script type="ts">
+<script>
   import Meta from '$lib/Meta.svelte';
   import Footer from '$lib/Footer.svelte';
   import PreloadingIndicator from '$lib/PreloadingIndicator.svelte';
@@ -22,17 +21,6 @@
 
 <Footer />
 
-<style global lang="postcss">
+<style>
     @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-
-    html.transition,
-    html.transition *,
-    html.transition *:before,
-    html.transition *:after {
-      transition: all 750ms;
-      transition-delay: 0;
-    }
 </style>

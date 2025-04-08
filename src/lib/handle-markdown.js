@@ -1,11 +1,6 @@
-import fs from 'fs';
-import glob from 'glob';
+import { readFileSync } from 'fs';
+import { globSync } from 'glob';
 import fm from 'front-matter';
-// import { compile } from 'mdsvex';
-// import { remark } from 'remark';
-// import html from 'remark-html';
-// import rehypePrism from '@mapbox/rehype-prism';
-// import { rehype } from 'rehype';
 
 /**
  * import all markdown files in specified path, extract front matter and convert to html
@@ -13,7 +8,7 @@ import fm from 'front-matter';
  * @returns [{path, attributes, body}]
  */
 export function importMarkdowns(markdownPath) {
-    let fileNames = glob.sync(`${markdownPath}*.md`);
+    const fileNames = globSync(`${markdownPath}*.md`);
     return fileNames.map((path) => convertMarkdown(path));
 }
 
@@ -24,19 +19,10 @@ export function importMarkdowns(markdownPath) {
  */
 export function convertMarkdown(path) {
     // read file
-    let file = fs.readFileSync(path, 'utf8');
+    const file = readFileSync(path, 'utf8');
     // extract frontmatter and body with the front-matter package
-    let { attributes, body } = fm(file);
+    const { attributes, body } = fm(file);
     
-    // const res = (async(body) => {
-    //   let r = await compile(body).then((final) => {
-    //     return final
-    //   })
-    // })
-
-    // parse the body to html with the remark/rehype pipeline
-    // let result = remark().use(html).processSync(body); //.contents;
-    // result = rehype().use(rehypePrism).processSync(result);
     return { path, attributes, html: body};
 }
 

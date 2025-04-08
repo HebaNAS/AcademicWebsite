@@ -1,28 +1,11 @@
-const colors = require('tailwindcss/colors')
-
-module.exports = {
-  mode: 'jit',
-  purge: {
-    content: [
-      './src/**/*.svelte',
-      './public/**/*.html',
-      './src/**/*.{js,jsx,ts,tsx}',
-    ],
-    safelist: ['theme-action'],
-    enabled: process.env.NODE_ENV == 'production'
-  },
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{html,js,svelte,ts}'],
   darkMode: 'class',
   theme: {
     fontFamily: {
       display: ['Source Serif Pro', 'Georgia', 'serif'],
       body: ['Synonym', 'system-ui', 'sans-serif'],
-    },
-    colors: {
-      transparent: 'transparent',
-      currentColor: 'currentColor',
-      gray: colors.gray,
-      white: colors.white,
-      black: colors.black,
     },
     extend: {
       colors: {
@@ -37,9 +20,6 @@ module.exports = {
         'theme-action-dark': '#05263B',
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }

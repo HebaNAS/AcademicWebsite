@@ -1,12 +1,9 @@
-import math from 'remark-math';
+import { visit } from 'unist-util-visit';
 import rehypeKatex from 'rehype-katex';
-import remarkHtml from 'remark-html';
-import remarkParse from 'remark-parse';
 import remarkMath from 'remark-math';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import katex from 'katex';
-import visit from 'unist-util-visit';
 
 const correct_hast_tree = () => (tree) => {
 	visit(tree, 'text', (node) => {
@@ -39,6 +36,6 @@ const katex_blocks = () => (tree) => {
 
 export const mdsvex_config = {
 	extensions: ['.svelte.md', '.md', '.svx'],
-	remarkPlugins: [katex_blocks, remarkHtml, remarkParse, remarkMath, remarkRehype],
+	remarkPlugins: [katex_blocks, remarkMath, remarkRehype],
 	rehypePlugins: [correct_hast_tree, rehypeKatex, rehypeStringify]
 };
