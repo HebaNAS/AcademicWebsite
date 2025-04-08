@@ -1,14 +1,13 @@
 <script>
     import { base } from '$app/paths';
-    import { page } from '$app/stores';
 </script>
 
 <section class="w-screen md:w-full lg:w-screen h-max bg-theme-fg-dark dark:bg-theme-action-dark grad-1 flex flex-col items-center justify-center py-20">
     <div class="w-11/12 md:w-8/12 bg-white dark:bg-theme-action p-10 rounded-lg shadow-xl text-center">
-        <h1 class="text-4xl font-bold text-theme-action dark:text-theme-fg-light mb-4">Oops! Something went wrong</h1>
+        <h1 class="text-4xl font-bold text-theme-action dark:text-theme-fg-light mb-4">Page Not Found</h1>
         
         <p class="text-xl text-theme-text-dark dark:text-theme-fg-light mb-6">
-            {$page.status}: {$page.error?.message || 'Page not found'}
+            The page you're looking for doesn't exist or has been moved.
         </p>
         
         <div class="flex flex-col md:flex-row justify-center gap-4 mt-8">

@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     export let title;
     export let date;
     export let excerpt;
@@ -7,7 +8,7 @@
     export let url;
 </script>
 
-<a href={url} class="transform hover:scale-110">
+<a href={base}/{url} class="transform hover:scale-110">
   <article class="shadow-lg rounded-sm h-[30rem] bg-theme-fg-light dark:bg-theme-action p-4 flex flex-col items-stretch justify-stretch">
     <a sveltekit:prefetch href={url} class="w-full self-center">
         <img src={thumbnail} alt="New blog post" class="border-bg-white border-8 rounded-md shadow-md" />
