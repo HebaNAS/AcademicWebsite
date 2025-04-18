@@ -39,6 +39,14 @@
     let presentations = [
         {
             id: 1,
+            title: "PhD Thesis Presentation",
+            date: "April 2025",
+            description: "Presentation of PhD thesis viva at Heriot-Watt University Dubai",
+            slideUrl: "https://hebanas.github.io/PhD-Viva-Presentation/",
+            expanded: false
+        },
+        {
+            id: 2,
             title: "Self-Supervised Learning for Pre-training Capsule Networks",
             date: "January 2025",
             description: "Presentation at the 2025 Information System Design & Intelligent Applications (ISDIA-2025) Conference",
@@ -46,7 +54,7 @@
             expanded: false
         },
         {
-            id: 2,
+            id: 3,
             title: "Explainable AI for Polyp Detection in Colonoscopy",
             date: "June 2021",
             description: "Presentation to Industrial Board of Experts at Heriot-Watt University Dubai",
@@ -110,6 +118,7 @@
             document.body.classList.remove('overflow-hidden');
         };
     });
+
 </script>
 
 
@@ -264,13 +273,34 @@
                 
                 {#if presentation.expanded}
                     <div transition:slide={{duration: 1000, easing: quintOut}} class="w-full border-t border-gray-200 dark:border-gray-700">
-                        <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
-                            <iframe frameborder="0" width="100%" height="100%" title="{presentation.title}" 
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                                    src="{presentation.slideUrl}" 
-                                    allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all">
+                        {#if presentation.slideUrl.includes('github.io')}                          
+                            <div style="position: relative; padding-bottom: 99%; height: 0; overflow: hidden;">
+                              <iframe 
+                                frameborder="0" 
+                                title="{presentation.title}" 
+                                src="{presentation.slideUrl}" 
+                                style="position: absolute; top: 0; left: -10%; width: 120%; height: 100%; border: 0; transform: scale(0.85);"
+                                allowscriptaccess="always" 
+                                allowfullscreen="true" 
+                                scrolling="no" 
+                                allownetworking="all">
                             </iframe>
-                        </div>
+                          </div>
+                      {:else}
+                          <!-- Regular handling for non-GitHub presentations (like Genially) -->
+                          <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+                              <iframe 
+                                  frameborder="0" 
+                                  title="{presentation.title}" 
+                                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                                  src="{presentation.slideUrl}" 
+                                  allowscriptaccess="always" 
+                                  allowfullscreen="true" 
+                                  scrolling="yes" 
+                                  allownetworking="all">
+                              </iframe>
+                          </div>
+                      {/if}
                     </div>
                 {/if}
             </div>
@@ -308,32 +338,41 @@
 {/if}
 
 <style lang="postcss">
-:global(.dark) .shadow-text {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
-}
+  :global(.dark) .shadow-text {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+  }
 
-@media (min-width: 876px) and (max-width: 1023px) {
-    .width-adjust {
-        width: 100vw;
+  @media (min-width: 876px) and (max-width: 1023px) {
+      .width-adjust {
+          width: 100vw;
+      }
+  }
+
+  /* Gradient background */
+  .grad-1 {
+      background: linear-gradient(146deg, rgba(255,255,255,0.2) 0%, rgba(2,0,36,0.1) 100%);
+  }
+
+  .dark .grad-1 {
+      background: linear-gradient(146deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%) !important;
+  }
+
+  /* Modal styling */
+  .modal-content {
+      animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+  }
+
+  .iframe-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
     }
-}
-
-/* Gradient background */
-.grad-1 {
-    background: linear-gradient(146deg, rgba(255,255,255,0.2) 0%, rgba(2,0,36,0.1) 100%);
-}
-
-.dark .grad-1 {
-    background: linear-gradient(146deg, rgba(2,0,36,0.15) 0%, rgba(2,0,36,0.35) 100%) !important;
-}
-
-/* Modal styling */
-.modal-content {
-    animation: fadeIn 0.3s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 </style>
