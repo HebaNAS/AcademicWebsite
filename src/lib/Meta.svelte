@@ -7,7 +7,7 @@
     <meta property="og:site_name" content="Heba El-Shimy Academic Site and Blog" />
     <meta property="og:url" content="https://www.macs.hw.ac.uk/~he4002/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="| Data Scientist, Researcher and Lecturer" />
+    <meta property="og:title" content="| Assistant Professor, AI in Healthcare Researcher" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv="content-language" content="en" />
@@ -36,5 +36,5 @@
             });
         });
     </script>
-    <title>Heba El-Shimy, FHEA, MBCS | Provost Fellow, Data & AI Specialist</title>
+    <title>Heba El-Shimy, PhD, FHEA, MBCS | Assistant Professor, Data & AI Specialist</title>
 </svelte:head>

@@ -14,8 +14,8 @@
                     <img class="w-7/12 xl:w-7/12 aspect-square mx-auto drop-shadow-2xl" src="{base}/heba.webp" alt="Heba El-Shimy" />
                 </div>
                 <div class="text-center my-10 lg:my-4 xl:my-10 w-10/12 lg:w-8/12 xl:w-10/12 mx-auto">
-                    <p class="font-bold text-theme-text-dark dark:text-theme-bg shadow-text">Heba El-Shimy, FHEA, MBCS</p>
-                    <p class="text-theme-text-dark dark:text-theme-fg-light shadow-text">Provost Fellow</p>
+                    <p class="font-bold text-theme-text-dark dark:text-theme-bg shadow-text">Heba El-Shimy, PhD, FHEA, MBCS</p>
+                    <p class="text-theme-text-dark dark:text-theme-fg-light shadow-text">Assistant Professor</p>
                     <hr class="border-theme-action dark:text-theme-fg-light border-t-4 mx-auto my-10 lg:my-4 xl:my-10 shadow-white" width="100" />
                 </div>
             </div>
@@ -58,7 +58,7 @@
         <div class="lg:self-center lg:pl-10 pt-10 px-4 lg:pt-0">
             <p class="font-bold text-4xl pb-3 text-theme-text-dark dark:text-theme-fg-light">Hello</p>
             <p class="text-theme-text-dark dark:text-theme-fg-light">
-                I'm Heba, a Provost Fellow at Heriot-Watt University, Dubai Campus. I'm a Data Scientist by education and specialise in Deep Learning and Computer Vision.
+                I'm Heba, Assistant Professor at Heriot-Watt University Dubai. I'm a Data Scientist by education and specialise in Deep Learning and Computer Vision.
             </p>
             <p class="text-theme-text-dark dark:text-theme-fg-light">
                 My interest and focus in research is the application of deep learning in healthcare, especially in imaging diagnostics, decision support and explainability (xAI) of deep learning models in this domain.
