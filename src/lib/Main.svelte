@@ -58,10 +58,17 @@
         <div class="lg:self-center lg:pl-10 pt-10 px-4 lg:pt-0">
             <p class="font-bold text-4xl pb-3 text-theme-text-dark dark:text-theme-fg-light">Hello</p>
             <p class="text-theme-text-dark dark:text-theme-fg-light">
-                I'm Heba, Assistant Professor at Heriot-Watt University Dubai. I'm a Data Scientist by education and specialise in Deep Learning and Computer Vision.
+                I'm Heba, Assistant Professor at Heriot-Watt University Dubai. I specialise in Deep Learning and Computer Vision. My research interest is AI in healthcare, especially imaging diagnostics, decision support and explainability (xAI).
             </p>
+            <br/>
             <p class="text-theme-text-dark dark:text-theme-fg-light">
-                My interest and focus in research is the application of deep learning in healthcare, especially in imaging diagnostics, decision support and explainability (xAI) of deep learning models in this domain.
+              I'm a member of Heriot-Watt University's Global Research Institute (GRI) for Health & Care Technologies. Check out our work <a class="underline hover:text-theme-action-dark dark:hover:text-theme-action" href="https://youtu.be/7Y3ZyNyTqns" target="_blank" rel="noopener noreferrer">in this video</a>
+            </p>
+            <br />
+            <p class="dark:text-theme-fg-light text-sm">
+              Orcid ID: <a class="underline hover:text-theme-action-dark dark:hover:text-theme-action" href="https://orcid.org/0000-0001-8465-8050" target="_blank" rel="noopener noreferrer">0000-0001-8465-8050</a><br />
+              Scopus Author ID: <a class="underline hover:text-theme-action-dark dark:hover:text-theme-action" href="https://www.scopus.com/authid/detail.uri?authorId=57983275900" target="_blank" rel="noopener noreferrer">57983275900</a><br />
+              Pure Profile: <a class="underline hover:text-theme-action-dark dark:hover:text-theme-action" href="https://researchportal.hw.ac.uk/en/persons/heba-elshimy/publications/" target="_blank" rel="noopener noreferrer">Heba El-Shimy</a>
             </p>
         </div>
     </div>

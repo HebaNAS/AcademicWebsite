@@ -8,15 +8,33 @@
     const publications = [
         {
             id: 1,
-            year: "2025",
-            title: "Self-Supervised Learning for Pre-training Capsule Networks: Overcoming Medical Imaging Dataset Challenges",
-            abstract: "Deep learning techniques are increasingly being adopted in diagnostic medical imaging. However, the limited availability of high-quality, large-scale medical datasets presents a significant challenge, often necessitating the use of transfer learning approaches. This study investigates self-supervised learning methods for pre-training capsule networks in polyp diagnostics for colon cancer. We used the PICCOLO dataset, comprising 3,433 samples, which exemplifies typical challenges in medical datasets: small size, class imbalance, and distribution shifts between data splits. Capsule networks offer inherent interpretability due to their architecture and inter-layer information routing mechanism. However, their limited native implementation in mainstream deep learning frameworks and the lack of pre-trained versions pose a significant challenge. This is particularly true if aiming to train them on small medical datasets, where leveraging pre-trained weights as initial parameters would be beneficial. We explored two auxiliary self-supervised learning tasks, colourisation and contrastive learning, for capsule network pre-training. We compared self-supervised pre-trained models against alternative initialisation strategies. Our findings suggest that contrastive learning and in-painting techniques are suitable auxiliary tasks for self-supervised learning in the medical domain. These techniques helped guide the model to capture important visual features that are beneficial for the downstream task of polyp classification, increasing its accuracy by 5.26% compared to other weight initialisation methods.",
-            link: "https://doi.org/10.48550/arXiv.2502.04748",
-            authors: "El-Shimy, H., Zantout, H., Lones, M., El Gayar, N.",
-            journal: "arXiv preprint arXiv:2502.04748 (awaiting publication)"
+            year: "2026 (Forthcoming)",
+            title: "Atrial Fibrillation Detection using Photoplethysmography Signals via 2D Convolutional Networks",
+            abstract: "Atrial Fibrillation is the most sustained cardiac arrhythmia and a leading risk factor for stroke and heart failure. While electrocardiography remains the clinical gold standard for AF detection, its requirement for specialized equipment and technical expertise limits scalability. Photoplethysmography, a non-invasive signal commonly acquired from consumer-grade smartwatches, offers a promising alternative provided the signal can be processed and interpreted robustly. This paper investigates AF detection from PPG signals by converting 1D PPG segments into compact 2D temporal-unfolded images and applying 2D CNNs. Using patient-wise cross-validation on the MIMICPERform dataset, the 2D CNN substantially reduces the performance gap between PPG and ECG observed for 1D CNNs, achieving near parity in ROC-AUC while remaining computationally compact for potential on-device deployment. The results indicate that temporal unfolding into the 2D image domain is an effective strategy for robust AF detection from wearable PPG.", // Add your abstract here
+            link: "", // Add DOI once assigned by Springer
+            authors: "Sajesh, S., El-Shimy, H., Alhaddadin, F.",
+            journal: "Proceedings of the International Conference on Advances in Computing Research (ACR'26) - Lecture Notes in Networks and Systems. Springer. [Accepted]"
         },
         {
             id: 2,
+            year: "2026",
+            title: "Advancing Skin Cancer Diagnosis Using Computer Vision to Aid the Visually Impaired",
+            abstract: "Skin cancer is one of the most common forms of cancer, with early detection being crucial for effective treatment. Individuals with visual impairment often struggle to monitor skin lesions independently, typically depending on caregivers or dermatologists for assistance.This study develops a skin cancer detection system using dermoscopic images from the HAM10000 dataset, evaluating four deep learning models to assist caregivers and dermatologists in providing faster analysis for the individuals who are visually impaired. The research employs segmentation masks to crop images during preprocessing, with data augmentation and transfer learning for optimizing performance. Among the models used, EfficientNetV2-L achieved the highest accuracy of 95.1% and a recall of 86.3% for malignant lesions in binary classification, showing reliable classification of cancerous lesions. This system helps caregivers and dermatologists with a tool to efficiently monitor skin health for visually impaired individuals, reducing diagnostic delays and supporting faster decision making.",  // Update to final version when published
+            link: "https://www.igi-global.com/book/improving-quality-life-people-disabilities/367327", // Update to the chapter one when made available 
+            authors: "Palanisamy, R., Sobnath, D., El-Shimy, H.",
+            journal: "Improving Quality of Life for People with Disabilities Through Smart Technologies (Ch. 11). I. U. Rehman, M. Nasralla, D. Sobnath, M. A. K. Khattak, & S. Ali (Eds.). IGI Global Scientific Publishing."
+        },
+        {
+            id: 3,
+            year: "2025",
+            title: "Self-Supervised Learning for Pre-training Capsule Networks: Overcoming Medical Imaging Dataset Challenges",
+            abstract: "Deep learning techniques are increasingly being adopted in diagnostic medical imaging. However, the limited availability of high-quality, large-scale medical datasets presents a significant challenge, often necessitating the use of transfer learning approaches. This study investigates self-supervised learning methods for pre-training capsule networks in polyp diagnostics for colon cancer. We used the PICCOLO dataset, comprising 3,433 samples, which exemplifies typical challenges in medical datasets: small size, class imbalance, and distribution shifts between data splits. Capsule networks offer inherent interpretability due to their architecture and inter-layer information routing mechanism. However, their limited native implementation in mainstream deep learning frameworks and the lack of pre-trained versions pose a significant challenge. This is particularly true if aiming to train them on small medical datasets, where leveraging pre-trained weights as initial parameters would be beneficial. We explored two auxiliary self-supervised learning tasks, colourisation and contrastive learning, for capsule network pre-training. We compared self-supervised pre-trained models against alternative initialisation strategies. Our findings suggest that contrastive learning and in-painting techniques are suitable auxiliary tasks for self-supervised learning in the medical domain. These techniques helped guide the model to capture important visual features that are beneficial for the downstream task of polyp classification, increasing its accuracy by 5.26% compared to other weight initialisation methods.",
+            link: "https://doi.org/10.1007/978-981-96-9242-2_22",
+            authors: "El-Shimy, H., Zantout, H., Lones, M., El Gayar, N.",
+            journal: "Information System Design: Intelligent Healthcare Informatics (ISDIA 2025) - Lecture Notes in Networks and Systems"
+        },
+        {
+            id: 4,
             year: "2022",
             title: "A Review of Capsule Networks in Medical Image Analysis",
             abstract: "Computer-aided diagnosis technologies are gaining increased focus within the medical field due to their role in assisting physicians in their diagnostic decision-making through the ability to recognise patterns in medical images. Such technologies started showing promising results in their ability to match or outperform physicians in certain specialities and improve the quality of medical diagnosis. Convolutional neural networks are one state-of-the-art technique to use for disease detection and diagnosis in medical images. However, capsule networks aim to improve over these by preserving part-whole relationships between an object and its sub-components leading to better interpretability, an important characteristic for applications in the medical domain. In this paper, we review the latest applications of capsule networks in computer-aided diagnosis from medical images and compare their results with those of convolutional neural networks employed for the same tasks. Our findings support the use of Capsule Networks over Convolutional Neural Networks for Computer-Aided Diagnosis due to their superiority in performance but more importantly for their better interpretability and their ability to achieve such performance on small datasets.",
@@ -25,7 +43,7 @@
             journal: "Artificial Neural Networks in Pattern Recognition - Lecture Notes in Computer Science ((LNAI,volume 13739))"
         },
         {
-            id: 3,
+            id: 5,
             year: "2022",
             title: "Assessment of Pharmaceutical Patent Novelty with Siamese Neural Networks",
             abstract: "Patents in the pharmaceutical field fulfil an important role as they contain details of the final product that is the culmination of years of research and possibly millions of dollars of investment. It is crucial that both patent producers and consumers are able to assess the novelty of such patents and perform basic processing on them. In this work, we review approaches in the literature in patent analysis and novelty assessment that range from basic digitisation to deep learning-based approaches including natural language processing, image processing and chemical structure extraction. We propose a system that automates the process of patent novelty assessment using Siamese neural networks for similarity detection. Our system showed promising results and has a potential to improve upon the current patent analysis methods, specifically in the pharmaceutical field, by not just focusing on the task from a Natural Language Processing perspective, but also, adding image analysis and adaptations for chemical structure extraction.",
@@ -84,6 +102,28 @@
             return p;
         });
     }
+
+    // Media data
+    let media = [
+        {
+            id: 1,
+            title: "Heriot-Watt University Global Research Institute for Health & Care Technologies Video",
+            date: "May 2025",
+            description: "A video showcasing the research activities at Heriot-Watt University Dubai, including my work on AI in healthcare.",
+            url: "https://www.youtube.com/embed/7Y3ZyNyTqns",
+        },
+    ];
+
+    // Certificates
+    let certs = [
+        {
+            id: 1,
+            title: "AI in Healthcare",
+            issuer: "Harvard Medical School",
+            date: "Completed August 2025",
+            url: "https://certificates.emeritus.org/137d2f3c-442f-48c0-be75-f75a647100b5",
+        },
+    ];
 
     // Create stores for modal state management to ensure reactivity
     let isModalOpen = false;
@@ -194,31 +234,7 @@
                     </p>
                 </li>
             </ol>
-        </div>
-        
-        <h2 class="font-display font-bold text-3xl mt-16 mb-2 text-theme-text-dark dark:text-theme-fg-light">Research Projects</h2>
-        <hr class="border-theme-action dark:border-theme-fg-light mt-2 mb-8"/>
-        
-        <div class="grid grid-cols-1 gap-8">
-            <div class="bg-white/80 dark:bg-theme-action-light/40 p-6 rounded shadow-lg">
-                <h3 class="font-bold text-xl mb-4 text-theme-action dark:text-theme-fg-light">Patent Similarity Analysis with Siamese Neural Networks (2018-2019)</h3>
-                <p class="text-theme-text-dark dark:text-theme-fg-light mb-4">This project used deep learning (CNN + LSTM) and NLP techniques to segment and classify pharmaceutical patents. The system analyzes patents to identify similarities, potential infringements, and novel claims.</p>
-                <p class="text-theme-text-dark dark:text-theme-fg-light mb-6">You can find this project on GitHub: <a href="https://github.com/HebaNAS/Patent-Similarity-Check" target="_blank" rel="noopener noreferrer" class="text-theme-action dark:text-theme-fg-light underline hover:no-underline">Patent Similarity Check</a></p>
-                
-                <div class="w-full bg-gray-100 dark:bg-theme-action-dark rounded p-4">
-                    <p class="text-theme-text-dark dark:text-theme-fg-light text-sm italic mb-2">Key technologies:</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-theme-action/10 dark:bg-theme-fg-light/10 text-theme-action dark:text-theme-fg-light rounded-full text-sm">Deep Learning</span>
-                        <span class="px-3 py-1 bg-theme-action/10 dark:bg-theme-fg-light/10 text-theme-action dark:text-theme-fg-light rounded-full text-sm">LSTM</span>
-                        <span class="px-3 py-1 bg-theme-action/10 dark:bg-theme-fg-light/10 text-theme-action dark:text-theme-fg-light rounded-full text-sm">CNN</span>
-                        <span class="px-3 py-1 bg-theme-action/10 dark:bg-theme-fg-light/10 text-theme-action dark:text-theme-fg-light rounded-full text-sm">NLP</span>
-                        <span class="px-3 py-1 bg-theme-action/10 dark:bg-theme-fg-light/10 text-theme-action dark:text-theme-fg-light rounded-full text-sm">Siamese Neural Networks</span>
-                        <span class="px-3 py-1 bg-theme-action/10 dark:bg-theme-fg-light/10 text-theme-action dark:text-theme-fg-light rounded-full text-sm">Entity-recognition</span>
-                        <span class="px-3 py-1 bg-theme-action/10 dark:bg-theme-fg-light/10 text-theme-action dark:text-theme-fg-light rounded-full text-sm">Python</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div> 
     </div>
 
   <div class="container w-8/12 mx-auto">
@@ -244,6 +260,60 @@
             </div>
         {/each}
       </div>
+    </div>
+
+    <div class="container w-8/12 mx-auto">
+        <h2 class="font-display font-bold text-3xl mt-16 mb-2 text-theme-text-dark dark:text-theme-fg-light">Videos</h2>
+        <hr class="border-theme-action dark:border-theme-fg-light mt-2 mb-8"/>
+        <div class="space-y-6">
+        {#each media as mediaitem}
+            <div class="bg-white dark:bg-theme-action-light/30 rounded shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-3">
+                        <h3 class="text-xl font-bold text-theme-text-dark dark:text-theme-fg-light">{mediaitem.title}</h3>
+                        <span class="text-sm font-medium bg-gray-200 dark:bg-theme-action-dark text-theme-text-dark dark:text-theme-fg-light py-1 px-4 rounded-full self-start">{mediaitem.date}</span>
+                    </div>
+                    <p class="text-theme-text-dark dark:text-theme-fg-light mb-6">{mediaitem.description}</p>
+                    <div class="relative w-full" style="padding-bottom: 56.25%;">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full rounded"
+                            src="{mediaitem.url}"
+                            title={mediaitem.title}
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div> 
+            </div>
+        {/each}
+      </div>
+    </div>
+
+    <div class="container w-8/12 mx-auto">
+        <h2 class="font-display font-bold text-3xl mt-16 mb-2 text-theme-text-dark dark:text-theme-fg-light">Certificates</h2>
+        <hr class="border-theme-action dark:border-theme-fg-light mt-2 mb-8"/>
+        <div class="space-y-6">
+        {#each certs as c}
+            <div class="bg-white dark:bg-theme-action-light/30 rounded shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+                        <h3 class="text-xl font-bold text-theme-text-dark dark:text-theme-fg-light">{c.title}</h3>
+                        <span class="text font-bold bg-gray-200 dark:bg-theme-action-dark text-theme-text-dark dark:text-theme-fg-light py-1 px-4 rounded-full self-start">{c.date}</span>
+                    </div>
+                    <p class="text-theme-text-dark dark:text-theme-fg-light mb-6 font-semibold text-lg">{c.issuer}</p>
+                    <div class="relative w-full" style="padding-bottom: 3.25%;">
+                      <a href="{c.url}" target="_blank" rel="noopener noreferrer">
+                        <img 
+                            class="rounded shadow-lg"
+                            src="{base}/harvard.png"
+                            alt="{c.title}" />
+                      </a>
+                    </div>
+                </div> 
+            </div>
+        {/each}
+        </div>
     </div>
 
     <div class="container w-8/12 mx-auto mb-12 pb-12">
@@ -307,6 +377,7 @@
         {/each}
       </div>
     </div>
+
 </section>
 
 {#if isModalOpen && selectedPublication}
