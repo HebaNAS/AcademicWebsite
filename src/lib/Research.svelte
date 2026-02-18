@@ -85,6 +85,20 @@
     let articles = [
         {
             id: 1,
+            title: "How Women Scientists Can Accelerate National Innovation Goals",
+            date: "February 2026",
+            description: "Article for The Integrator Digital Magazine",
+            url: "https://integratormedia.com/2026/02/12/how-women-scientists-can-accelerate-national-innovation-goals/",
+        },
+        {
+            id: 2,
+            title: "Building Trust in AI: The Case for Local Governance and Regulation",
+            date: "January 2026",
+            description: "Article for The AI Times Digital Magazine",
+            url: "https://gecnewswire.com/the-ai-times-january-2026/#the-ai-times-january-2026/32",
+        },
+        {
+            id: 3,
             title: "Smart Buildings for Better Healthcare",
             date: "September 2022",
             description: "HWUD Centre of Excellence in Smart Construction Research Bulletin",
