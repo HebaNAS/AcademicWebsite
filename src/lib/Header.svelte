@@ -86,7 +86,7 @@
             <div class="flex space-x-4">
               <a href="{base}/" class="text-theme-action dark:text-white px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500 {$page.url.pathname === base || $page.url.pathname === base + '/' ? 'active' : ''}" aria-current="page">Home</a>
   
-              <a href="{base}/research" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500 {$page.url.pathname === base + '/research' || $page.url.pathname === base + '/research/' ? 'active' : ''}">Research</a>
+              <a href="{base}/outputs" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg hover:scale-100 px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500 {$page.url.pathname === base + '/outputs' || $page.url.pathname === base + '/outputs/' ? 'active' : ''}">Outputs</a>
   
               <a href="{base}/posts" class="text-theme-text dark:text-white dark:hover:text-theme-fg hover:text-theme-fg px-3 py-2 text-xl font-normal transition-colors ease-in-out duration-500 {$page.url.pathname === base + '/posts' || $page.url.pathname === base + '/posts/' ? 'active' : ''}">Blog</a>
   
@@ -116,7 +116,7 @@
       <div class="px-2 pt-2 pb-3 space-y-1">
         <a href="{base}/" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal {$page.url.pathname === base || $page.url.pathname === base + '/' ? 'active' : ''}">Home</a>
   
-        <a href="{base}/research" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal {$page.url.pathname === base + '/research' || $page.url.pathname === base + '/research/' ? 'active' : ''}">Research</a>
+        <a href="{base}/outputs" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal {$page.url.pathname === base + '/outputs' || $page.url.pathname === base + '/outputs/' ? 'active' : ''}">Outputs</a>
   
         <a href="{base}/posts" class="text-theme-text dark:text-theme-fg-light block px-3 py-2 rounded-md text-base font-normal {$page.url.pathname === base + '/posts' || $page.url.pathname === base + '/posts/' ? 'active' : ''}">Blog</a>
   
