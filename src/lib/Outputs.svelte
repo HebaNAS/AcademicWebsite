@@ -26,12 +26,12 @@
     const publications = [
         {
             id: 1,
-            year: "2026 (Forthcoming)",
+            year: "2026",
             title: "Atrial Fibrillation Detection using Photoplethysmography Signals via 2D Convolutional Networks",
-            abstract: "Atrial Fibrillation is the most sustained cardiac arrhythmia and a leading risk factor for stroke and heart failure. While electrocardiography remains the clinical gold standard for AF detection, its requirement for specialized equipment and technical expertise limits scalability. Photoplethysmography, a non-invasive signal commonly acquired from consumer-grade smartwatches, offers a promising alternative provided the signal can be processed and interpreted robustly. This paper investigates AF detection from PPG signals by converting 1D PPG segments into compact 2D temporal-unfolded images and applying 2D CNNs. Using patient-wise cross-validation on the MIMICPERform dataset, the 2D CNN substantially reduces the performance gap between PPG and ECG observed for 1D CNNs, achieving near parity in ROC-AUC while remaining computationally compact for potential on-device deployment. The results indicate that temporal unfolding into the 2D image domain is an effective strategy for robust AF detection from wearable PPG.", // Add your abstract here
-            link: "", // Add DOI once assigned by Springer
+            abstract: "Atrial Fibrillation is the most sustained cardiac arrhythmia and a leading risk factor for stroke and heart failure. While electrocardiography remains the clinical gold standard for AF detection, its requirement for specialized equipment and technical expertise limits scalability. Photoplethysmography, a non-invasive signal commonly acquired from consumer-grade smartwatches, offers a promising alternative provided the signal can be processed and interpreted robustly. This paper investigates AF detection from PPG signals by converting 1D PPG segments into spectrogram images and applying regularized 2D CNNs. Using patient-wise cross-validation on the MIMIC PERform dataset with comprehensive anti-overfitting measures, the 2D CNN achieved near-perfect performance (AUC: 0.995, Accuracy: 0.955, F1: 0.959) that was statistically comparable to ECG-based detection (AUC: 0.993, Accuracy: 0.970, F1: 0.973). The 2D spectrogram approach substantially outperformed 1D CNNs on PPG data (AUC gap: 0.569) while maintaining computational efficiency suitable for wearable deployment. The results demonstrate that spectrogram representations enable PPG-based AF detection that matches clinical-grade ECG performance.",
+            link: "https://link.springer.com/chapter/10.1007/978-3-032-23883-2_3",
             authors: "Sajesh, S., El-Shimy, H., Alhaddadin, F.",
-            journal: "Proceedings of the International Conference on Advances in Computing Research (ACR'26) - Lecture Notes in Networks and Systems. Springer. [Accepted]"
+            journal: "Proceedings of the International Conference on Advances in Computing Research (ACR'26) - Lecture Notes in Networks and Systems. Springer."
         },
         {
             id: 2,
